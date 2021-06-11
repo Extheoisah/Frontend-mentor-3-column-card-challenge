@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* FONT */
+  --body-ff-1: "Lexend Deca", sans-serif;
+  --body-ff-2: "Big Shoulders Display", cursive;
+
+  --body-fs: 15px;
+
+  /* PRIMARY COLORS */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* NEUTRAL COLORS */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  /* color: transparent; */
+}
+
+.card h1 {
+  font-family: var(--body-ff-1);
+  /* font-weight: 700; */
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+body {
+  font-family: var(--body-ff-2);
+  background-color: var(--very-light-gray);
+}
+
+/* Card */
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 4em 1.5em;
+}
+
+.card {
+  background-color: var(--bright-orange);
+  color: var(--transparent-white);
+  padding: 2.5em;
+}
+
+.container .card .card__text {
+  padding-bottom: 1em;
+  line-height: 1.7;
+}
+
+.card .card__button a {
+  width: 60%;
+  background-color: var(--very-light-gray);
+  padding: 0.6em 2em;
+  border-radius: 100px;
+}
+
+.container .one {
+  border-radius: 11px 11px 0 0;
+}
+
+.container .two {
+  background-color: var(--dark-cyan);
+}
+
+.container .three {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 11px 11px;
+}
+
+.container .one .card__button a {
+  color: var(--bright-orange);
+}
+
+.container .two .card__button a {
+  color: var(--dark-cyan);
+}
+
+.container .three .card__button a {
+  color: var(--very-dark-cyan);
+}
+
+.card .card__button a:hover {
+  background-color: transparent;
+  border: 2px solid var(--very-light-gray);
+  color: white;
+  z-index: 99;
+}
+
+.card__icon,
+.card__title,
+.card__text {
+  margin-bottom: 1.5em;
+}
+
+/* Media Queries */
+@media screen and (min-width: 765px) {
+  .container {
+    display: flex;
+    /* height: 90vh; */
+  }
+
+  .container .one {
+    border-radius: 11px 0 0 11px;
+  }
+
+  .container .three {
+    border-radius: 0 11px 11px 0;
+  }
+
+  .container .card .card__text {
+    padding-bottom: 5em;
+    line-height: 1.7;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__button {
+    align-items: flex-end;
+  }
+}
