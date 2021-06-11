@@ -36,14 +36,15 @@ a {
 }
 
 .card h1 {
-  font-family: var(--body-ff-1);
-  /* font-weight: 700; */
+  font-family: var(--body-ff-2);
+  font-weight: 700;
+  font-size: 2em;
   text-transform: uppercase;
   color: var(--very-light-gray);
 }
 
 body {
-  font-family: var(--body-ff-2);
+  font-family: var(--body-ff-1);
   background-color: var(--very-light-gray);
 }
 
